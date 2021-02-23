@@ -1,0 +1,31 @@
+{
+    "name": "@sample/server",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "mocha \"dist/test/**/*.spec.js\"",
+        "prestart": "yarn workspace @sample/app bundle:prod",
+        "start": "node --enable-source-maps ./dist/server-main.js"
+    },
+    "peerDependencies": {
+        "react": ">=17",
+        "react-dom": ">=17"
+    },
+    "dependencies": {
+        "@sample/app": "^1.0.0",
+        "compression": "^1.7.4",
+        "express": "^4.17.1"
+    },
+    "files": [
+        "dist",
+        "src",
+        "!dist/test",
+        "!dist/tsconfig.tsbuildinfo"
+    ],
+    "license": "MIT",
+    "repository": "git@github.com:wixplosives/sample-monorepo.git",
+    "private": true,
+    "publishConfig": {
+        "access": "public"
+    }
+}
