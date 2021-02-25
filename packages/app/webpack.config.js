@@ -1,19 +1,23 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const rootWebpackConfig = require('../../webpack.config');
 
-/** @type import('webpack').Configuration */
-module.exports = {
-    ...rootWebpackConfig,
+module.exports = function(env, argv) {
+  return {
+    mode: env.production ? 'production' : 'development',
+    devtool: env.production ? 'source-map' : 'eval',
+
+    devServer: {
+      open: true,
+      historyApiFallback: true
+    },
+
     entry: {
-        main: require.resolve('./src/client-main.tsx'),
+      index: './build/index.js',
     },
-    output: {
-        path: path.join(__dirname, 'dist/umd'),
-        libraryTarget: 'umd',
-    },
+
     plugins: [
-        ...rootWebpackConfig.plugins,
-        new HtmlWebpackPlugin({ title: 'Sample Monorepo App' }),
-    ],
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+      }),
+    ]
+  }
 };

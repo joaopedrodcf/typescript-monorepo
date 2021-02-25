@@ -1,7 +1,0 @@
-node_modules
-umd
-dist
-yarn.lock
-*.json
-LICENSE
-*.md
