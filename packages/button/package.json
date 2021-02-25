@@ -9,6 +9,12 @@
     "private": true,
     "scripts": {
       "build": "tsc -b",
-      "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo"
+      "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
+      "watch": "tsc -b -w --preserveWatchOutput"
+    },
+    "dependencies": {
+        "@dogbook/button": "^1.0.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
     }
 }

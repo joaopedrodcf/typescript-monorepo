@@ -1,4 +1,5 @@
 packages/*/build
 packages/*/dist
-
 node_modules
+packages/*/tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
