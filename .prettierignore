@@ -1,0 +1,10 @@
+dist
+node_modules
+yarn.lock
+*.md
+*.js
+*.ts
+*.tsx
+*.html
+*.css
+*.mdx

@@ -1,24 +1,22 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const rootWebpackConfig = require('../../webpack.config');
+const path = require('path');
 
-module.exports = function(env, argv) {
-  return {
-    mode: env.production ? 'production' : 'development',
-    devtool: env.production ? 'source-map' : 'eval',
-
-    devServer: {
-      open: true,
-      historyApiFallback: true
-    },
-
+/** @type import('webpack').Configuration */
+module.exports = {
+    ...rootWebpackConfig,
     entry: {
-      index: './build/index.js',
+        main: require.resolve('./src/client.tsx'),
     },
-
+    output: {
+        path: path.join(__dirname, 'dist/umd'),
+        libraryTarget: 'umd',
+    },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
-      }),
-    ]
-  }
+        ...rootWebpackConfig.plugins,
+        new HtmlWebpackPlugin({
+            template: require.resolve('./src/public/index.html'),
+        }),
+    ],
 };

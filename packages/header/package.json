@@ -1,5 +1,5 @@
 {
-    "name": "@dogbook/button",
+    "name": "@dogbook/header",
     "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

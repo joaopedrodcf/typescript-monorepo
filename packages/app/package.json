@@ -8,21 +8,13 @@
     ],
     "private": true,
     "scripts": {
-        "start": "webpack serve",
-        "build": "tsc -b && webpack --env production",
-        "clean": "rm -rf ./dist && rm -rf ./build && rm tsconfig.tsbuildinfo",
+        "start": "webpack serve --mode=development --hot",
         "watch": "tsc -b -w --preserveWatchOutput"
     },
     "dependencies": {
         "@dogbook/button": "^1.0.0",
+        "@dogbook/header": "^1.0.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
-    },
-    "devDependencies": {
-        "@types/react": "^17.0.2",
-        "html-webpack-plugin": "^5.2.0",
-        "webpack": "^5.24.2",
-        "webpack-cli": "^4.5.0",
-        "webpack-dev-server": "^3.11.2"
     }
 }

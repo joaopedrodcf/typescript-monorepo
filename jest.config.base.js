@@ -4,10 +4,10 @@ module.exports = {
     testEnvironment: 'node',
     collectCoverage: true,
     coveragePathIgnorePatterns: [
-      '<rootDir>/build/',
-      '<rootDir>/dist/',
-      '<rootDir>/node_modules/',
+        '<rootDir>/build/',
+        '<rootDir>/dist/',
+        '<rootDir>/node_modules/',
     ],
     coverageDirectory: '<rootDir>/coverage/',
-    verbose: true
+    verbose: true,
 };

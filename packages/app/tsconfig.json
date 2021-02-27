@@ -1,16 +1,9 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-      "outDir": "build",
-      "rootDir": "src",
-      "lib": [ "dom", "ES2019"]
+        "outDir": "dist",
+        "rootDir": "src"
     },
-    "references": [
-        { "path":  "../button" }
-    ],
-    "exclude": [
-      "node_modules",
-      "build",
-      "dist"
-    ]
+    "exclude": ["node_modules", "dist"],
+    "references": [{ "path": "../button" }, { "path": "../header" }]
 }

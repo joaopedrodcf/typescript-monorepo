@@ -1,27 +1,41 @@
 module.exports = {
-    env: {
-        "browser": true,
-        "jest": true,
-        "node": true
+    settings: {
+        react: {
+            version: 'detect',
+        },
     },
-    root: true,
     parser: '@typescript-eslint/parser',
-    plugins: [
-      '@typescript-eslint',
-      "react",
-      "jsx-a11y",
-      "prettier"
-    ],
+    env: {
+        browser: true,
+        jest: true,
+        node: true,
+    },
     extends: [
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
-      "plugin:react/recommended" , 
-      "plugin:jsx-a11y/recommended",
-      "plugin:testing-library/recommended",
-      "plugin:jest-dom/recommended",
-      'prettier',
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:prettier/recommended',
+        'prettier',
+        'plugin:jsx-a11y/recommended',
+        'plugin:testing-library/recommended',
+        'plugin:jest-dom/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
+    plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'import', 'prettier'],
     rules: {
-        "react/prop-types": "off"
-    }
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'external',
+                    'index',
+                    'sibling',
+                    'parent',
+                    'internal',
+                    'builtin',
+                ],
+            },
+        ],
+        'react/prop-types': 'off',
+    },
 };

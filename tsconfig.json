@@ -1,16 +1,9 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "declaration": true,
-      "declarationMap": true,
-      "sourceMap": true,
-      "strict": true,
-      "skipLibCheck": true,
-      "jsx": "react",
-      "esModuleInterop": true,
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "target": "es2015",
-      "composite": true
-    }
+    "files": [],
+    // This needs to point to each package of monorepo tsconfig file
+    "references": [
+        { "path": "./packages/app" },
+        { "path": "./packages/button" },
+        { "path": "./packages/header" }
+    ]
 }
