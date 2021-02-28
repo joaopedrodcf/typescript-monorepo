@@ -1,9 +1,6 @@
 import React from 'react';
+import { Wrapper } from './styles';
 
-export interface ButtonProps {
-    label: string;
-}
-
-export const Button: React.FC<ButtonProps> = ({ label }) => {
-    return <button>{label} afgasfasfas</button>;
+export const Button: React.FC = ({ children }) => {
+    return <Wrapper>{children}</Wrapper>;
 };

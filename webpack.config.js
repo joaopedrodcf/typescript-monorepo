@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /** @type import('webpack').Configuration */
 module.exports = {
@@ -43,5 +44,6 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[name].css',
         }),
+        new BundleAnalyzerPlugin()
     ],
 };

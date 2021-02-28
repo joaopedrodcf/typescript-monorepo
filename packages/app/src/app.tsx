@@ -9,17 +9,20 @@ export interface AppProps {
 export const App: React.FC<AppProps> = () => {
     return (
         <div>
-            <Header title="Monorepo home" links={[
-                {
-                    href: "/about",
-                    name: "about"
-                },
-                {
-                    href: "/contacts",
-                    name: "contacts"
-                }
-            ]} />
-            <Button label="my monorepo button" />
+            <Header
+                title="Monorepo home"
+                links={[
+                    {
+                        href: '/about',
+                        name: 'about',
+                    },
+                    {
+                        href: '/contacts',
+                        name: 'contacts',
+                    },
+                ]}
+            />
+            <Button>my monorepo button</Button>
         </div>
     );
 };

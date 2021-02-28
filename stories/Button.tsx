@@ -7,9 +7,6 @@ export interface ButtonProps {
     onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button: React.FC<ButtonProps> = ({ label }) => {
-    return <DogBookButton label={label} />;
+    return <DogBookButton>{label}</DogBookButton>;
 };
