@@ -9,10 +9,6 @@ module.exports = {
     entry: {
         main: require.resolve('./src/client.tsx'),
     },
-    output: {
-        path: path.join(__dirname, 'dist/umd'),
-        libraryTarget: 'umd',
-    },
     plugins: [
         ...rootWebpackConfig.plugins,
         new HtmlWebpackPlugin({

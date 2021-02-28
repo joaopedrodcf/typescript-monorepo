@@ -1,11 +1,17 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+    .BundleAnalyzerPlugin;
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
+console.log(
+    '🚀 ~ file: webpack.config.js ~ line 7 ~ isDevelopment',
+    isDevelopment
+);
 
 /** @type import('webpack').Configuration */
 module.exports = {
-    devtool: 'source-map',
-    context: __dirname,
+    mode: isDevelopment ? 'development' : 'production',
     module: {
         rules: [
             {
@@ -15,20 +21,19 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
-                options: {
-                    projectReferences: true,
-                    configFile: require.resolve('./tsconfig.json'),
-                    compilerOptions: {
-                        // build still catches these. avoid them during bunding time for a nicer dev experience.
-                        noUnusedLocals: false,
-                        noUnusedParameters: false,
+                use: [
+                    isDevelopment && {
+                        loader: 'babel-loader',
+                        options: { plugins: ['react-refresh/babel'] },
                     },
-                },
-            },
-            {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            projectReferences: true,
+                            configFile: require.resolve('./tsconfig.json'),
+                        },
+                    },
+                ].filter(Boolean),
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
@@ -37,13 +42,10 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json'],
+        extensions: ['.ts', '.tsx', '.js'],
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[name].css',
-        }),
-        new BundleAnalyzerPlugin()
+        isDevelopment && new ReactRefreshPlugin(),
+        new BundleAnalyzerPlugin(),
     ],
 };
