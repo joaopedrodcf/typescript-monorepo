@@ -4,6 +4,7 @@
     "references": [
         { "path": "./packages/app" },
         { "path": "./packages/button" },
-        { "path": "./packages/header" }
+        { "path": "./packages/header" },
+        { "path": "./packages/storybook" }
     ]
 }

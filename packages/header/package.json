@@ -8,7 +8,7 @@
     ],
     "private": true,
     "scripts": {
-        "watch": "tsc -b -w --preserveWatchOutput"
+        "docs:dev": "tsc -b -w --preserveWatchOutput"
     },
     "dependencies": {
         "react": "^17.0.1",

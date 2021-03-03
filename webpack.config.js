@@ -4,10 +4,6 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-console.log(
-    '🚀 ~ file: webpack.config.js ~ line 7 ~ isDevelopment',
-    isDevelopment
-);
 
 /** @type import('webpack').Configuration */
 module.exports = {

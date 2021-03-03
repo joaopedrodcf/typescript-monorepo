@@ -11,7 +11,7 @@ interface ILinks {
     href: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ title, links }) => {
+export const Header: React.FC<HeaderProps> = ({ title, links = [] }) => {
     return (
         <Wrapper>
             <a href="/">

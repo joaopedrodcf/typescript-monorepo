@@ -4,15 +4,16 @@ A template of a monorepo to create a react application
 
 ## Features
 
-[] SSR
 [x] CSS in JS
 [x] React fast refresh
 [x] Precommit validation
 [x] Storybook for all the components
-[] Storybook with HMR
+[x] Storybook with HMR
 [x] Eslint and Prettier with recommended rules
-[] Tsconfig with recommend rules for react projects
 [x] Prettier running on json files only and eslint on js, ts, tsx
+[] SSR
+[] Tsconfig with recommend rules for react projects
+[] Graphql
 
 ## How to make references work
 
@@ -26,8 +27,36 @@ Everytime you add a new package you must do the following
 Followed the config of https://github.com/pmmmwh/react-refresh-webpack-plugin/tree/main/examples/typescript-without-babel
 
 
+## Storybook
+
+As developing a monorepo is fundamental to be able to start your components in isolation instead of the main app in this repo we included a way for you to start the storybook and change your components and see changes in real time!
+
+## Important commands of the repo
+
+### Start main app
+```
+yarn start
+```
+
+### Lint all the project
+```
+yarn lint
+```
+
+### Start storybook
+```
+yarn storybook
+```
+
+
+
 ## biography
 
+Monorepo configs
 https://github.com/wixplosives/sample-monorepo
 
+Monorepo configs
 https://baltuta.eu/posts/typescript-lerna-monorepo-the-setup
+
+Storybook and lerna setup
+https://medium.com/loftbr/creating-a-design-system-with-monorepo-bc18e055fb3c

@@ -1,5 +1,5 @@
 {
-    "name": "@dogbook/button",
+    "name": "@dogbook/storybook",
     "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     ],
     "private": true,
     "scripts": {
-        "docs:dev": "tsc -b -w --preserveWatchOutput"
+        "storybook": "start-storybook",
+        "docs:dev": "npm run storybook"
     },
     "dependencies": {
         "react": "^17.0.1",
