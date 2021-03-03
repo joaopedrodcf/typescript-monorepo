@@ -1,5 +1,5 @@
 {
-    "name": "@dogbook/button",
+    "name": "@typescript-monorepo/button",
     "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

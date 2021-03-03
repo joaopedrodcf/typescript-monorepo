@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button as DogBookButton } from '@dogbook/button';
+import { Button as DogBookButton } from '@typescript-monorepo/button';
 
 export interface ButtonProps {
     label: string;

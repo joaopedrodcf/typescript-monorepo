@@ -1,5 +1,5 @@
 {
-    "name": "@dogbook/storybook",
+    "name": "@typescript-monorepo/storybook",
     "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

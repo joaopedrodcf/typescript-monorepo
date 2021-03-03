@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header as DogBookHeader } from '@dogbook/header';
+import { Header as DogBookHeader } from '@typescript-monorepo/header';
 
 export interface HeaderProps {
     title: string;

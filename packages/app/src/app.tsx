@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '@dogbook/button';
-import { Header } from '@dogbook/header';
+import { Button } from '@typescript-monorepo/button';
+import { Header } from '@typescript-monorepo/header';
 
 export interface AppProps {
     text: string;
