@@ -1,12 +1,9 @@
 import React from 'react';
-import { Button } from '@typescript-monorepo/button';
 import { Header } from '@typescript-monorepo/header';
+import { NavLink } from 'react-router-dom';
+import { Routes } from './routes';
 
-export interface AppProps {
-    text: string;
-}
-
-export const App: React.FC<AppProps> = () => {
+export const App: React.FC = () => {
     return (
         <div>
             <Header
@@ -22,7 +19,18 @@ export const App: React.FC<AppProps> = () => {
                     },
                 ]}
             />
-            <Button>my monorepo button</Button>
+            <ul>
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/about">About</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contacts">Contacts</NavLink>
+                </li>
+            </ul>
+            <Routes />
         </div>
     );
 };

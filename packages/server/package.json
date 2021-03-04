@@ -1,0 +1,24 @@
+{
+    "name": "@typescript-monorepo/server",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "private": true,
+    "scripts": {
+        "prestart": "yarn workspace @typescript-monorepo/app bundle:prod && yarn build",
+        "build": "tsc -b",
+        "start": "node --enable-source-maps ./dist/server-main.js",
+        "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
+    },
+    "dependencies": {
+        "@typescript-monorepo/app": "^1.0.0",
+        "compression": "^1.7.4",
+        "express": "^4.17.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-router-dom": "*"
+    }
+}

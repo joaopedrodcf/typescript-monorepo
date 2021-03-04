@@ -10,9 +10,16 @@ A template of a monorepo to create a react application.
 - [x] Storybook with HMR
 - [x] Eslint and Prettier with recommended rules
 - [x] Prettier running on json files only and eslint on js, ts, tsx
-- [ ] SSR
+- [x] SSR
+- [ ] Github actions to run the unit tests
 - [ ] Tsconfig with recommend rules for react projects
 - [ ] Graphql
+- [ ] Peerdependencies in each package outside of root for shared dependencies
+- [ ] Codeowners for folder validation if multiple teams work in the repo
+- [ ] Jest + Testing library unit tests
+- [ ] Yarn 2
+
+
 
 ## Folder structure
 ```
@@ -87,3 +94,15 @@ https://baltuta.eu/posts/typescript-lerna-monorepo-the-setup
 
 Storybook and lerna setup
 https://medium.com/loftbr/creating-a-design-system-with-monorepo-bc18e055fb3c
+
+SSR with next and apollo client
+https://dev.to/givehug/next-js-apollo-client-and-server-on-a-single-express-app-55l6
+https://github.com/givehug/devto-monorepo
+
+https://www.digitalocean.com/community/tutorials/react-react-router-ssr
+
+https://medium.com/the-andela-way/how-to-set-up-an-express-api-using-webpack-and-typescript-69d18c8c4f52
+
+SSR react router
+https://www.digitalocean.com/community/tutorials/react-react-router-ssr
+
