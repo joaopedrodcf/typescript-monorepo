@@ -13,8 +13,8 @@
         "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
     },
     "dependencies": {
-        "@emotion/react": "^11.1.5",
-        "@emotion/styled": "^11.1.5",
+        "@emotion/react": "^11.4.0",
+        "@emotion/styled": "^11.3.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
     }
