@@ -58,7 +58,7 @@
         "webpack-bundle-analyzer": "4.4.1",
         "webpack-cli": "4.7.0",
         "webpack-dev-server": "3.11.2",
-        "webpack-node-externals": "2.5.2"
+        "webpack-node-externals": "3.0.0"
     },
     "resolutions": {
         "@types/react": "17.0.5"
