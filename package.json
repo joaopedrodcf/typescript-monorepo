@@ -21,7 +21,7 @@
         "@types/compression": "^1.7.0",
         "@types/express": "^4.17.11",
         "@types/node": "^14.14.35",
-        "@types/react": "17.0.1",
+        "@types/react": "17.0.5",
         "@types/react-dom": "17.0.1",
         "@types/react-router": "^5.1.12",
         "@types/react-router-dom": "^5.1.7",
@@ -61,7 +61,7 @@
         "webpack-node-externals": "^2.5.2"
     },
     "resolutions": {
-        "@types/react": "17.0.1"
+        "@types/react": "17.0.5"
     },
     "scripts": {
         "watch": "lerna run watch --parallel",
