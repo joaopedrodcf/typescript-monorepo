@@ -7,4 +7,5 @@ module.exports = {
     testEnvironment: 'jsdom', // This is overriden, from the base testEnvironment
     name: packageJson.name,
     displayName: packageJson.name,
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };

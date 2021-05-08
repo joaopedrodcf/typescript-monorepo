@@ -9,3 +9,4 @@ tsconfig.tsbuildinfo
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+coverage

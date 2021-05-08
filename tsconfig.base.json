@@ -15,7 +15,11 @@
         "noFallthroughCasesInSwitch": true,
         "noUncheckedIndexedAccess": true,
         "moduleResolution": "node",
-        "types": [],
+        "types": [
+            "jest",
+            "@testing-library/jest-dom",
+            "@types/testing-library__jest-dom"
+        ], // Make globals work
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "jsxImportSource": "@emotion/react"
