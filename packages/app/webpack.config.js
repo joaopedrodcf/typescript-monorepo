@@ -43,7 +43,7 @@ module.exports = (env, argv) => {
                         {
                             loader: 'ts-loader',
                             options: {
-                                projectReferences: true,
+                                projectReferences: true, // webpack creating typescript project references
                                 configFile: require.resolve('./tsconfig.json'),
                             },
                         },

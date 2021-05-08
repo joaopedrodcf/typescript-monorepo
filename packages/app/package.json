@@ -10,7 +10,6 @@
     "scripts": {
         "start": "webpack serve --mode=development --hot --open",
         "bundle:prod": "webpack --mode=production",
-        "watch": "tsc -b -w --preserveWatchOutput",
         "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
     },
     "dependencies": {

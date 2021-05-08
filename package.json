@@ -64,7 +64,6 @@
         "@types/react": "17.0.5"
     },
     "scripts": {
-        "watch": "lerna run watch --parallel",
         "start": "yarn workspace @typescript-monorepo/app start",
         "start:server": "yarn workspace @typescript-monorepo/server start",
         "lint": "yarn lint:js && yarn lint:json && yarn lint:css",
@@ -73,6 +72,7 @@
         "lint:css": "stylelint **/styles.tsx --fix",
         "test": "yarn build && jest",
         "storybook": "lerna run docs:dev --parallel",
-        "clean": "lerna run clean --parallel"
+        "clean": "lerna run clean --parallel",
+        "watch": "tsc -b ./tsconfig.json --watch"
     }
 }

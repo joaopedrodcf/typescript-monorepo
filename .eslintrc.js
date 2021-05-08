@@ -37,5 +37,6 @@ module.exports = {
             },
         ],
         'react/prop-types': 'off',
+        'react/react-in-jsx-scope': 'off', // not necessary anymore for react 17
     },
 };
