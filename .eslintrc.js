@@ -16,7 +16,7 @@ module.exports = {
         'plugin:prettier/recommended',
         'prettier',
         'plugin:jsx-a11y/recommended',
-        'plugin:testing-library/recommended',
+        'plugin:testing-library/react',
         'plugin:jest-dom/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
