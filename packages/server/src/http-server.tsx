@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/render-result-naming-convention */
 import express from 'express';
 import compression from 'compression';
 import ReactDOMServer from 'react-dom/server';
