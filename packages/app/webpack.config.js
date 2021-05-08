@@ -48,6 +48,7 @@ module.exports = (env, argv) => {
                             },
                         },
                     ].filter(Boolean),
+                    exclude: /node_modules/,
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,

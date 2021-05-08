@@ -3,7 +3,6 @@ import express from 'express';
 import compression from 'compression';
 import ReactDOMServer from 'react-dom/server';
 import { App } from '@typescript-monorepo/app';
-import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import * as fs from 'fs';
 import * as path from 'path';

@@ -106,3 +106,5 @@ https://medium.com/the-andela-way/how-to-set-up-an-express-api-using-webpack-and
 SSR react router
 https://www.digitalocean.com/community/tutorials/react-react-router-ssr
 
+Handle watch cmd for typescript references
+https://blog.logrocket.com/boost-your-productivity-with-typescript-project-references/

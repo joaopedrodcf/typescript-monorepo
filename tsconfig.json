@@ -5,6 +5,7 @@
         { "path": "./packages/app" },
         { "path": "./packages/button" },
         { "path": "./packages/header" },
+        { "path": "./packages/server" },
         { "path": "./packages/storybook" }
     ]
 }

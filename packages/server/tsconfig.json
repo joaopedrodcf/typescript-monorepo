@@ -3,7 +3,8 @@
     "compilerOptions": {
         "outDir": "dist",
         "rootDir": "src",
-        "types": ["node"]
+        "types": ["node"],
+        "skipLibCheck": true // prevent errors in node things
     },
     "exclude": ["node_modules", "dist"],
     "references": [{ "path": "../app" }]
