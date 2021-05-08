@@ -1,9 +1,22 @@
-# typescript-monorepo
+# typescript-monorepo ![language](https://img.shields.io/badge/language-typescript-blue.svg)
+
+> Ready for development!
+
 A template of a monorepo to create a react application.
+
+## :books: Table of Contents
+
+- [Features](#features)
+- [Folder structure](#folder-structure)
+- [Typescript references](#typescript-references)
+- [Commands](#keyboard-commands)
+- [Biography](#books-biography)
+- [Contributing](#memo-contributing)
+- [License](#scroll-license)
 
 ## Features
 
-- [x] CSS in JS
+- [x] CSS in JS ( emotion )
 - [x] React fast refresh
 - [x] Precommit validation
 - [x] Storybook for all the components
@@ -18,8 +31,6 @@ A template of a monorepo to create a react application.
 - [ ] Codeowners for folder validation if multiple teams work in the repo
 - [ ] Jest + Testing library unit tests
 - [ ] Yarn 2
-
-
 
 ## Folder structure
 ```
@@ -44,34 +55,43 @@ packages/                       // feel free to add more components in this fold
 package.json                    // everytime you need a new devDependency add it here
 tsconfig.json                   // everytime you add a new package modify this file by adding the new package path
 ```
-## How to make references work
+## Typescript references
 
-Everytime you add a new package you must do the following
+Every time you add a new package you must do the following
 
 1. Add to root tsconfig.json the path of the new package
-2. If this package is a dependency of anothe package you also need to add it to the parent tsconfig.json file
+2. If this package is a dependency of another package you also need to add it to the parent tsconfig.json file
 
-## React fast refresh
+WIP: Create an automatic way of creating the project references
 
-Followed the config of https://github.com/pmmmwh/react-refresh-webpack-plugin/tree/main/examples/typescript-without-babel
-
-
-## Storybook
-
-As developing a monorepo is fundamental to be able to start your components in isolation instead of the main app in this repo we included a way for you to start the storybook and change your components and see changes in real time!
-
-## Important commands of the repo
+## :keyboard: Commands
 
 Run all the commands from the root folder
-The monorepo is built in a way where you dont need to change from the root to run any command
+The monorepo is built in a way where you don't need to change from the root to run any command
 
 ### Install dependencies
 ```
 yarn
 ```
-### Start main app
+
+### Start dev server
 ```
 yarn start
+```
+
+### Start production server (SSR)
+```
+yarn start:server
+```
+
+### Typescript build
+```
+yarn build
+```
+
+### Typescript watch
+```
+yarn watch
 ```
 
 ### Lint all the project
@@ -79,12 +99,17 @@ yarn start
 yarn lint
 ```
 
+### Test all the project
+```
+yarn test
+```
+
 ### Start storybook
 ```
 yarn storybook
 ```
 
-## Biography
+## :books: Biography
 
 Monorepo configs
 https://github.com/wixplosives/sample-monorepo
@@ -108,3 +133,15 @@ https://www.digitalocean.com/community/tutorials/react-react-router-ssr
 
 Handle watch cmd for typescript references
 https://blog.logrocket.com/boost-your-productivity-with-typescript-project-references/
+
+Configure react fast refresh
+https://github.com/pmmmwh/react-refresh-webpack-plugin/tree/main/examples/typescript-without-babel
+
+
+## :memo: Contributing
+
+Feel free to contribute to the project
+
+## :scroll: License
+
+[MIT](LICENSE) © [Joao Ferreira](https://github.com/joaopedrodcf/)
