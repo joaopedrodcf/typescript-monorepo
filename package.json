@@ -48,7 +48,7 @@
         "lint-staged": "11.0.0",
         "mini-css-extract-plugin": "1.6.0",
         "path": "0.12.7",
-        "prettier": "2.2.1",
+        "prettier": "2.3.0",
         "react-refresh": "0.10.0",
         "source-map-loader": "2.0.1",
         "stylelint": "13.13.1",
