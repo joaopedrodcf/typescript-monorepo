@@ -24,7 +24,7 @@ A template of a monorepo to create a react application.
 - [x] Eslint and Prettier with recommended rules
 - [x] Prettier running on json files only and eslint on js, ts, tsx
 - [x] SSR
-- [ ] Github actions to run the unit tests
+- [x] Github actions setup
 - [ ] Tsconfig with recommend rules for react projects
 - [ ] Graphql
 - [ ] Peerdependencies in each package outside of root for shared dependencies
