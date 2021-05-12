@@ -16,21 +16,23 @@ A template of a monorepo to create a react application.
 
 ## Features
 
-- [x] CSS in JS ( emotion )
-- [x] React fast refresh
-- [x] Precommit validation
-- [x] Storybook for all the components
-- [x] Storybook with HMR
-- [x] Eslint and Prettier with recommended rules
-- [x] Prettier running on json files only and eslint on js, ts, tsx
-- [x] SSR
-- [x] Github actions setup
+- [x] monorepo tooling (Yarn workspaces and Lerna)
+- [x] Precommit validation (Husky and lint-staged)
+- [x] Linting with recommended rules (Eslint,Prettier and Stylelint)
+- [x] Github actions (test, lint, etc)
+- [x] Storybook (with HMR)
+- [x] CSS in Js (emotion)
+- [x] HMR on packages (React fast refresh)
+- [x] App running in CSR and SSR
+- [x] Unit testing (jest and react testing library)
+- [x] Bundling (webpack 5)
+- [ ] State management (apollo client)
+- [ ] HTTP requests on server/client Isomorphic (graphql)
 - [ ] Tsconfig with recommend rules for react projects
-- [ ] Graphql
-- [ ] Peerdependencies in each package outside of root for shared dependencies
-- [ ] Codeowners for folder validation if multiple teams work in the repo
-- [ ] Jest + Testing library unit tests
-- [ ] Yarn 2
+- [ ] Package Manager (Yarn 2)
+- [ ] Multiple team project handling tool (Codeowners and Merge bot)
+- [ ] Document how to handle peerdependencies on the monorepo
+
 
 ## Folder structure
 ```
@@ -122,6 +124,7 @@ https://medium.com/loftbr/creating-a-design-system-with-monorepo-bc18e055fb3c
 
 SSR with next and apollo client
 https://dev.to/givehug/next-js-apollo-client-and-server-on-a-single-express-app-55l6
+
 https://github.com/givehug/devto-monorepo
 
 https://www.digitalocean.com/community/tutorials/react-react-router-ssr
