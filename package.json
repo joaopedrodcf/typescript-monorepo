@@ -23,7 +23,7 @@
         "@types/compression": "1.7.0",
         "@types/express": "4.17.11",
         "@types/jest": "26.0.23",
-        "@types/node": "15.3.1",
+        "@types/node": "15.6.0",
         "@types/react": "17.0.1",
         "@types/react-dom": "17.0.1",
         "@types/react-router": "5.1.14",
