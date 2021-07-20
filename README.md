@@ -26,8 +26,8 @@ A template of a monorepo to create a react application.
 - [x] App running in CSR and SSR
 - [x] Unit testing (jest and react testing library)
 - [x] Bundling (webpack 5)
-- [ ] State management (apollo client)
-- [ ] HTTP requests on server/client Isomorphic (graphql)
+- [x] Prevent duplicated versions of packages (dedubcheck)
+- [x] HTTP requests on server/client Isomorphic and state management (@apollo/client)
 - [ ] Tsconfig with recommend rules for react projects
 - [ ] Package Manager (Yarn 2)
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
@@ -104,6 +104,11 @@ yarn lint
 ### Test all the project
 ```
 yarn test
+```
+
+### Find duplicated dependencies on the project
+```
+yarn test:dependencies
 ```
 
 ### Start storybook

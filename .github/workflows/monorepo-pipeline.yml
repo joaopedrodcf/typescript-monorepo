@@ -4,7 +4,7 @@ name: Monorepo pipeline
 on: push
 
 jobs:
-  descriptive-name:
+  monorepo-pipeline:
     runs-on: ubuntu-latest
 
     strategy:
@@ -32,12 +32,16 @@ jobs:
         key: ${{ runner.os }}-yarn-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
 
     # `--prefer-offline` gives cache priority
+    # --frozen-lockfile to break the pipe if the lock was not updated
     - name: Install dependencies
       run: yarn install --prefer-offline --frozen-lockfile
 
     # Ready to run steps that rely on node_modules
     - name: Lint step
       run: yarn lint
+
+    - name: Duplicated dependencies check step
+      run: yarn test:dependencies
 
     - name: Build step
       run: yarn build

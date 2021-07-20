@@ -4,8 +4,39 @@ import compression from 'compression';
 import ReactDOMServer from 'react-dom/server';
 import { App } from '@typescript-monorepo/app';
 import { StaticRouter } from 'react-router-dom';
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+    HttpLink,
+} from '@apollo/client';
+import fetch from 'cross-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
+
+// Instantiate required constructor fields
+const cache = new InMemoryCache();
+const link = new HttpLink({
+    uri: 'https://graphql-pokeapi.graphcdn.app',
+    fetch,
+});
+
+export const client = new ApolloClient({
+    // Provide required constructor fields
+    cache: cache,
+    link: link,
+    ssrMode: true,
+
+    // Provide some optional constructor fields
+    name: 'graphql-pokemon-client',
+    version: '1.0',
+    queryDeduplication: false,
+    defaultOptions: {
+        watchQuery: {
+            fetchPolicy: 'cache-and-network',
+        },
+    },
+});
 
 export function createHttpServer(): express.Express {
     const app = express();
@@ -22,9 +53,11 @@ function ssrHandler(req: express.Request, res: express.Response) {
     const indexFile = path.resolve('../app/dist/index.html');
 
     const app = ReactDOMServer.renderToString(
-        <StaticRouter location={req.url} context={{}}>
-            <App />
-        </StaticRouter>
+        <ApolloProvider client={client}>
+            <StaticRouter location={req.url} context={{}}>
+                <App />
+            </StaticRouter>{' '}
+        </ApolloProvider>
     );
 
     fs.readFile(indexFile, 'utf8', (err: any, data: any) => {
