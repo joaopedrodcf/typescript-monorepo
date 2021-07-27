@@ -36,7 +36,7 @@
         "@typescript-eslint/eslint-plugin": "4.28.5",
         "@typescript-eslint/parser": "4.28.5",
         "babel-loader": "8.2.2",
-        "css-loader": "5.2.7",
+        "css-loader": "6.2.0",
         "dedubcheck": "0.0.6",
         "eslint": "7.31.0",
         "eslint-config-prettier": "8.3.0",
