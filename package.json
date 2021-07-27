@@ -6,13 +6,13 @@
         "packages/*"
     ],
     "dependencies": {
+        "@apollo/client": "3.3.21",
         "@emotion/react": "11.4.0",
         "@emotion/styled": "11.3.0",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
         "cross-fetch": "3.1.4",
-        "@apollo/client": "3.3.21",
-        "graphql": "15.5.1"
+        "graphql": "15.5.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
     },
     "devDependencies": {
         "@babel/core": "7.14.8",
@@ -20,6 +20,8 @@
         "@storybook/addon-actions": "6.3.6",
         "@storybook/addon-essentials": "6.3.6",
         "@storybook/addon-links": "6.3.6",
+        "@storybook/manager-webpack5": "6.4.0-alpha.21",
+        "@storybook/builder-webpack5": "6.4.0-alpha.21",
         "@storybook/react": "6.3.6",
         "@testing-library/jest-dom": "5.14.1",
         "@testing-library/react": "12.0.0",
@@ -35,6 +37,7 @@
         "@typescript-eslint/parser": "4.28.5",
         "babel-loader": "8.2.2",
         "css-loader": "5.2.7",
+        "dedubcheck": "0.0.6",
         "eslint": "7.31.0",
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-import": "2.23.4",
@@ -64,8 +67,7 @@
         "webpack-bundle-analyzer": "4.4.2",
         "webpack-cli": "4.7.2",
         "webpack-dev-server": "3.11.2",
-        "webpack-node-externals": "3.0.0",
-        "dedubcheck": "0.0.6"
+        "webpack-node-externals": "3.0.0"
     },
     "resolutions": {
         "@types/react": "17.0.1",
