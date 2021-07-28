@@ -1,17 +1,27 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import NotFound from '../pages/not-found';
-import Home from '../pages/home';
-import About from '../pages/about';
-import Contacts from '../pages/contacts';
+import loadable from '@loadable/component';
+
+const HomeLoadable = loadable(() => import('../pages/home'), {
+    fallback: <div>route loading ...</div>,
+});
+const AboutLoadable = loadable(() => import('../pages/about'), {
+    fallback: <div>route loading ...</div>,
+});
+const ContactsLoadable = loadable(() => import('../pages/contacts'), {
+    fallback: <div>route loading ...</div>,
+});
+const NotFoundLoadable = loadable(() => import('../pages/not-found'), {
+    fallback: <div>route loading ...</div>,
+});
 
 export const Routes: React.FC = () => {
     return (
         <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contacts" component={Contacts} />
-            <Route component={NotFound} />
+            <Route exact path="/" component={HomeLoadable} />
+            <Route path="/about" component={AboutLoadable} />
+            <Route path="/contacts" component={ContactsLoadable} />
+            <Route component={NotFoundLoadable} />
         </Switch>
     );
 };

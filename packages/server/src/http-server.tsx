@@ -13,6 +13,7 @@ import {
 import fetch from 'cross-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
+// import { ChunkExtractor } from '@loadable/server'
 
 // Instantiate required constructor fields
 const cache = new InMemoryCache();
@@ -59,6 +60,8 @@ function ssrHandler(req: express.Request, res: express.Response) {
             </StaticRouter>{' '}
         </ApolloProvider>
     );
+
+    // missing renderDataFromTree from apollo
 
     fs.readFile(indexFile, 'utf8', (err: any, data: any) => {
         if (err) {

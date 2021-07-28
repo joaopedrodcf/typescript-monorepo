@@ -4,23 +4,22 @@ const BundleAnalyzerPlugin =
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const path = require('path');
 
 const clientPort = 8080;
 
 module.exports = (env, argv) => {
     const isDevelopment = argv.mode !== 'production';
+    const entry = isDevelopment ? 'client' : 'server';
 
     return {
         target: 'web',
-        entry: {
-            main: require.resolve('./src/client.tsx'),
-        },
+        entry: path.resolve(__dirname, `./src/${entry}.tsx`),
         output: {
+            filename: isDevelopment ? '[name].js' : '[name].[chunkhash:8].js',
+            publicPath: isDevelopment ? '/' : '/dist',
             path: path.join(__dirname, './dist'),
-            filename: 'index.js',
-            publicPath: isDevelopment ? '/' : '/dist', // when yarn start we need the files in / but when yarn start:server we need them on dist folder
-            clean: true,
         },
         devServer: {
             port: clientPort,
@@ -35,11 +34,16 @@ module.exports = (env, argv) => {
                     exclude: /node_modules/, // prevent error: failed to parse source map
                 },
                 {
-                    test: /\.tsx?$/,
+                    test: /\.(ts)x?$/,
                     use: [
                         isDevelopment && {
                             loader: 'babel-loader',
-                            options: { plugins: ['react-refresh/babel'] },
+                            options: {
+                                plugins: [
+                                    'react-refresh/babel',
+                                    '@loadable/babel-plugin',
+                                ],
+                            },
                         },
                         {
                             loader: 'ts-loader',
@@ -56,13 +60,13 @@ module.exports = (env, argv) => {
                     loader: 'file-loader',
                 },
                 {
-                    test: /\.css$/,
-                    exclude: /node_modules/,
+                    test: /\.css$/i,
                     use: [MiniCssExtractPlugin.loader, 'css-loader'],
                 },
             ],
         },
         resolve: {
+            modules: ['node_modules'],
             extensions: ['.ts', '.tsx', '.js'],
         },
         plugins: [
@@ -70,8 +74,14 @@ module.exports = (env, argv) => {
                 template: require.resolve('./src/public/index.html'),
             }),
             new MiniCssExtractPlugin(),
+            new LoadablePlugin(),
             isDevelopment && new ReactRefreshPlugin(),
             isDevelopment && new BundleAnalyzerPlugin(),
         ].filter(Boolean),
+        optimization: {
+            splitChunks: {
+                chunks: 'all',
+            },
+        },
     };
 };
