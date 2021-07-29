@@ -28,6 +28,7 @@ A template of a monorepo to create a react application.
 - [x] Bundling (webpack 5)
 - [x] Prevent duplicated versions of packages (dedubcheck)
 - [x] HTTP requests on server/client Isomorphic and state management (@apollo/client)
+- [x] Deployed to production (heroku)
 - [ ] Tsconfig with recommend rules for react projects
 - [ ] Package Manager (Yarn 2)
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
@@ -115,6 +116,26 @@ yarn test:dependencies
 ```
 yarn storybook
 ```
+
+### Heroku deploy
+On your project do this steps:
+
+Login in your heroku account
+```
+heroku login
+```
+
+This will create a project in the heroku account you loggedin previously
+```
+heroku create
+```
+
+Can be master or main the next command depending on your repo
+```
+git push heroku master
+```
+
+Note: This part requires you to have a heroku account
 
 ## :books: Biography
 

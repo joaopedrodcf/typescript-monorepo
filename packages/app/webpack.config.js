@@ -45,6 +45,12 @@ module.exports = (env, argv) => {
                                 ],
                             },
                         },
+                        !isDevelopment && {
+                            loader: 'babel-loader',
+                            options: {
+                                plugins: ['@loadable/babel-plugin'],
+                            },
+                        },
                         {
                             loader: 'ts-loader',
                             options: {

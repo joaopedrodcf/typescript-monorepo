@@ -45,7 +45,7 @@ export const App: React.FC = () => {
                 `}
             />
             <Header
-                title="Monorepo home"
+                title="Monorepo"
                 links={[
                     {
                         href: '/about',
