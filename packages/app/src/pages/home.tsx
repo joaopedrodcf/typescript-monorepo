@@ -1,9 +1,11 @@
 import { gql, useQuery } from '@apollo/client';
+import styled from '@emotion/styled';
+
 import React from 'react';
 
 const GET_POKEMON_DETAILS = gql`
     {
-        pokemons(limit: 150, offset: 0) {
+        pokemons(limit: 300, offset: 0) {
             results {
                 url
                 name
@@ -13,20 +15,36 @@ const GET_POKEMON_DETAILS = gql`
     }
 `;
 
+const List = styled('ul')`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+`;
+
+const ListChild = styled('li')`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const Label = styled('div')`
+    font-size: 1.6rem;
+`;
+
 export const Home: React.FC = () => {
     const { loading, error, data } = useQuery(GET_POKEMON_DETAILS);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
     return (
-        <ul>
+        <List>
             {data.pokemons.results.map((x: any) => (
-                <div key={x.name}>
-                    <p>{x.name}</p>
+                <ListChild key={x.name}>
                     <img src={x.image} alt={x.name} />
-                </div>
+                    <Label>{x.name}</Label>
+                </ListChild>
             ))}
-        </ul>
+        </List>
     );
 };
 

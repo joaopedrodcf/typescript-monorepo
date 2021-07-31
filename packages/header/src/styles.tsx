@@ -6,11 +6,11 @@ export const Wrapper = styled('div')`
     align-items: center;
     justify-content: space-between;
     background-color: rgb(22, 27, 34);
-    color: #fff;
     padding: 16px 24px;
 
     h1 {
         color: #fff;
+        font-size: 2rem;
     }
 `;
 
@@ -22,5 +22,7 @@ export const Links = styled('div')`
     > a {
         margin: 0 12px;
         color: #fff;
+        font-size: 1.6rem;
+        text-transform: capitalize;
     }
 `;
