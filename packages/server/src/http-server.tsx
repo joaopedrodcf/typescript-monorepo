@@ -11,9 +11,8 @@ import {
     HttpLink,
 } from '@apollo/client';
 import fetch from 'cross-fetch';
-import * as fs from 'fs';
+import { ChunkExtractor } from '@loadable/server';
 import * as path from 'path';
-// import { ChunkExtractor } from '@loadable/server'
 
 // Instantiate required constructor fields
 const cache = new InMemoryCache();
@@ -50,30 +49,37 @@ export function createHttpServer(): express.Express {
     return app;
 }
 
-function ssrHandler(req: express.Request, res: express.Response) {
-    const indexFile = path.resolve('../app/dist/index.html');
+const statsFile = path.resolve('../app/dist/loadable-stats.json');
 
-    const app = ReactDOMServer.renderToString(
+const html = ({
+    content,
+    extractor,
+}: {
+    content: string;
+    extractor: any;
+}) => `<!doctype html>
+<html>
+  <body>
+    <div id="app">${content}</div>
+    ${extractor.getScriptTags()}
+  </body>
+</html>`;
+
+function ssrHandler(req: express.Request, res: express.Response) {
+    const extractor = new ChunkExtractor({ statsFile });
+    const Content = (
         <ApolloProvider client={client}>
             <StaticRouter location={req.url} context={{}}>
                 <App />
-            </StaticRouter>{' '}
+            </StaticRouter>
         </ApolloProvider>
     );
 
+    const content = ReactDOMServer.renderToString(
+        extractor.collectChunks(Content)
+    );
+
+    res.status(200).end(html({ content, extractor }));
+
     // missing renderDataFromTree from apollo
-
-    fs.readFile(indexFile, 'utf8', (err: any, data: any) => {
-        if (err) {
-            console.error('Something went wrong:', err);
-            return res.status(500).send('Oops, better luck next time!');
-        }
-
-        return res.send(
-            data.replace(
-                '<div id="root"></div>',
-                `<div id="root" data-ssr>${app}</div>`
-            )
-        );
-    });
 }

@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
-        "target": "es2019",
-        "module": "commonjs",
+        "target": "es2015",
+        "module": "ESNext",
         "lib": ["es2019", "dom"],
-        "jsx": "react-jsx",
+        "jsx": "react",
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
         "composite": true,
+        /* Strict Type-Checking Options */
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -18,10 +19,10 @@
         "types": [
             "jest",
             "@testing-library/jest-dom",
-            "@types/testing-library__jest-dom"
+            "@types/testing-library__jest-dom",
+            "@emotion/react"
         ], // Make globals work
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "jsxImportSource": "@emotion/react"
+        "forceConsistentCasingInFileNames": true
     }
 }

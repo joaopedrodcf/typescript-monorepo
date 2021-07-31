@@ -4361,6 +4361,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/loadable__server@5.12.6":
+  version "5.12.6"
+  resolved "https://registry.yarnpkg.com/@types/loadable__server/-/loadable__server-5.12.6.tgz#5a64eed56f8d0c5d1e3f636e231f30da20d9eb8d"
+  integrity sha512-LgO5aUQJYFQY5bLuAef4anCZ/SwsEo2hG/D4zfREgUGDXjezBjZCwlUmmpfIQLsR64reLTCijS0m7gsd1k9cKA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/markdown-to-jsx@^6.11.3":
   version "6.11.3"
   resolved "https://registry.yarnpkg.com/@types/markdown-to-jsx/-/markdown-to-jsx-6.11.3.tgz#cdd1619308fecbc8be7e6a26f3751260249b020e"
@@ -11220,6 +11227,11 @@ load-json-file@^6.2.0:
     parse-json "^5.0.0"
     strip-bom "^4.0.0"
     type-fest "^0.6.0"
+
+loadable-ts-transformer@1.0.0-alpha.3:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/loadable-ts-transformer/-/loadable-ts-transformer-1.0.0-alpha.3.tgz#f22f3f6cc040da68131bfe0d0f5c3b8e9bb6c905"
+  integrity sha512-N5o4B+3mRJedWS5s7UC7Jtz0WxMD9OhKrV03mtkJ96lmgdiOCv/rNj9jR450sz60nuzoP8/WqH2g0KCH2jYaDQ==
 
 loader-runner@^2.4.0:
   version "2.4.0"

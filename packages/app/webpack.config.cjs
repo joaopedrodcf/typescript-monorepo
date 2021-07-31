@@ -5,6 +5,7 @@ const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
+const { loadableTransformer } = require('loadable-ts-transformer');
 const path = require('path');
 
 const clientPort = 8080;
@@ -39,16 +40,7 @@ module.exports = (env, argv) => {
                         isDevelopment && {
                             loader: 'babel-loader',
                             options: {
-                                plugins: [
-                                    'react-refresh/babel',
-                                    '@loadable/babel-plugin',
-                                ],
-                            },
-                        },
-                        !isDevelopment && {
-                            loader: 'babel-loader',
-                            options: {
-                                plugins: ['@loadable/babel-plugin'],
+                                plugins: ['react-refresh/babel'],
                             },
                         },
                         {
@@ -56,6 +48,9 @@ module.exports = (env, argv) => {
                             options: {
                                 projectReferences: true, // webpack creating typescript project references
                                 configFile: require.resolve('./tsconfig.json'),
+                                getCustomTransformers: () => ({
+                                    before: [loadableTransformer],
+                                }),
                             },
                         },
                     ].filter(Boolean),
@@ -68,6 +63,12 @@ module.exports = (env, argv) => {
                 {
                     test: /\.css$/i,
                     use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                },
+                {
+                    test: /\.m?js/,
+                    resolve: {
+                        fullySpecified: false,
+                    },
                 },
             ],
         },
