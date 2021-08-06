@@ -52,7 +52,7 @@
         "husky": "7.0.1",
         "jest": "27.0.6",
         "lerna": "4.0.0",
-        "lint-staged": "11.1.1",
+        "lint-staged": "11.1.2",
         "mini-css-extract-plugin": "2.2.0",
         "path": "0.12.7",
         "prettier": "2.3.2",
