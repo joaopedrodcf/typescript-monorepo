@@ -11,8 +11,25 @@ import {
     HttpLink,
 } from '@apollo/client';
 import fetch from 'cross-fetch';
-import * as fs from 'fs';
+import { getDataFromTree } from '@apollo/client/react/ssr';
 import * as path from 'path';
+
+export const Html = ({ content, state }: any) => {
+    return (
+        <html lang="en">
+            <body>
+                <div id="root" dangerouslySetInnerHTML={{ __html: content }} />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `window.__APOLLO_STATE__=${JSON.stringify(
+                            state
+                        ).replace(/</g, '\\u003c')};`,
+                    }}
+                />
+            </body>
+        </html>
+    );
+};
 
 export const client = new ApolloClient({
     // Provide required constructor fields
@@ -45,9 +62,7 @@ export function createHttpServer(): express.Express {
 }
 
 function ssrHandler(req: express.Request, res: express.Response) {
-    const indexFile = path.resolve('../app/dist/index.html');
-
-    const app = ReactDOMServer.renderToString(
+    const app = (
         <ApolloProvider client={client}>
             <StaticRouter location={req.url} context={{}}>
                 <App />
@@ -55,19 +70,18 @@ function ssrHandler(req: express.Request, res: express.Response) {
         </ApolloProvider>
     );
 
-    // missing renderDataFromTree from apollo
+    getDataFromTree(app).then((content) => {
+        // Extract the entirety of the Apollo Client cache's current state
+        const initialState = client.extract();
 
-    fs.readFile(indexFile, 'utf8', (err: any, data: any) => {
-        if (err) {
-            console.error('Something went wrong:', err);
-            return res.status(500).send('Oops, better luck next time!');
-        }
+        // Add both the page content and the cache state to a top-level component
+        const html = <Html content={content} state={initialState} />;
 
-        return res.send(
-            data.replace(
-                '<div id="root"></div>',
-                `<div id="root" data-ssr>${app}</div>`
-            )
+        // Render the component to static markup and return it
+        res.status(200);
+        res.send(
+            `<!doctype html>\n${ReactDOMServer.renderToStaticMarkup(html)}`
         );
+        res.end();
     });
 }
