@@ -13,21 +13,15 @@ import {
 import fetch from 'cross-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
-// import { ChunkExtractor } from '@loadable/server'
-
-// Instantiate required constructor fields
-const cache = new InMemoryCache();
-const link = new HttpLink({
-    uri: 'https://graphql-pokeapi.graphcdn.app',
-    fetch,
-});
 
 export const client = new ApolloClient({
     // Provide required constructor fields
-    cache: cache,
-    link: link,
+    cache: new InMemoryCache(),
+    link: new HttpLink({
+        uri: 'https://graphql-pokeapi.graphcdn.app',
+        fetch,
+    }),
     ssrMode: true,
-
     // Provide some optional constructor fields
     name: 'graphql-pokemon-client',
     version: '1.0',

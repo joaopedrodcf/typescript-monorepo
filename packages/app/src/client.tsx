@@ -7,7 +7,6 @@ import {
     HttpLink,
 } from '@apollo/client';
 import fetch from 'cross-fetch';
-import { loadableReady } from '@loadable/component';
 import { App } from './app';
 
 // Instantiate required constructor fields
@@ -33,13 +32,11 @@ export const client = new ApolloClient({
     },
 });
 
-loadableReady(() => {
-    ReactDOM.hydrate(
-        <ApolloProvider client={client}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </ApolloProvider>,
-        document.getElementById('root')
-    );
-});
+ReactDOM.hydrate(
+    <ApolloProvider client={client}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ApolloProvider>,
+    document.getElementById('root')
+);
