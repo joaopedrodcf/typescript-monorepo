@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header } from '@typescript-monorepo/header';
-import { NavLink } from 'react-router-dom';
 import { Global, css } from '@emotion/react';
 import { Routes } from './routes';
 
@@ -57,17 +56,6 @@ export const App: React.FC = () => {
                     },
                 ]}
             />
-            <ul>
-                <li>
-                    <NavLink to="/">Home</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about">About</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contacts">Contacts</NavLink>
-                </li>
-            </ul>
             <Routes />
         </div>
     );

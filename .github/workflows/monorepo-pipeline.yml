@@ -48,3 +48,11 @@ jobs:
 
     - name: Test step
       run: yarn test
+
+    - name: E2E test step
+      uses: cypress-io/github-action@v2
+      with:
+          browser: chrome
+          headless: true
+          start: yarn start
+          wait-on: http://localhost:8080
