@@ -16,21 +16,22 @@ A template of a monorepo to create a react application.
 
 ## Features
 
-- [x] monorepo tooling (Yarn workspaces and Lerna)
-- [x] Precommit validation (Husky and lint-staged)
-- [x] Linting with recommended rules (Eslint,Prettier and Stylelint)
+- [x] monorepo tooling ([Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) and [Lerna](https://github.com/lerna/lerna))
+- [x] Precommit validation ([Husky](https://github.com/typicode/husky) and [Lint-staged](https://github.com/okonet/lint-staged))
+- [x] Linting with recommended rules ([Eslint](https://github.com/eslint/eslint),[Prettier](https://github.com/prettier/prettier) and [Stylelint](https://github.com/stylelint/stylelint))
 - [x] Github actions (test, lint, etc)
 - [x] Storybook (with HMR)
-- [x] CSS in Js (emotion)
-- [x] HMR on packages (React fast refresh)
+- [x] CSS in Js ([Emotion](https://github.com/emotion-js/emotion))
+- [x] HMR on packages ([React fast refresh](https://github.com/pmmmwh/react-refresh-webpack-plugin))
 - [x] App running in CSR and SSR
-- [x] Unit testing (jest and react testing library)
-- [x] Bundling (webpack 5)
-- [x] Prevent duplicated versions of packages (dedubcheck)
-- [x] HTTP requests on server/client Isomorphic and state management (@apollo/client)
-- [x] Deployed to production (heroku)
+- [x] Unit testing ([Jest](https://github.com/facebook/jest) and [React testing library](https://github.com/testing-library/react-testing-library))
+- [x] Bundling ([Webpack 5](https://github.com/webpack/webpack))
+- [x] Prevent duplicated versions of packages ([Dedubcheck](https://github.com/innovatrics/dedubcheck))
+- [x] HTTP requests on server/client Isomorphic and state management ([Apollo/client](https://github.com/apollographql/apollo-client))
+- [x] Deployed to production ([Heroku](https://dashboard.heroku.com/))
+- [x] End 2 End tests ([Cypress](https://github.com/cypress-io/cypress))
 - [ ] Tsconfig with recommend rules for react projects
-- [ ] Package Manager (Yarn 2)
+- [ ] Package Manager ([Yarn 2](https://yarnpkg.com/getting-started/migration))
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
 - [ ] Document how to handle peerdependencies on the monorepo
 
@@ -116,6 +117,13 @@ yarn test:dependencies
 ```
 yarn storybook
 ```
+
+### Test E2E
+```
+yarn test:e2e
+```
+
+note: you need to start the client
 
 ### Heroku deploy
 On your project do this steps:
