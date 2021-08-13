@@ -4,7 +4,7 @@
         "outDir": "dist",
         "rootDir": "src",
         "types": ["node"],
-        "skipLibCheck": true // prevent errors in node things
+        "skipLibCheck": true
     },
     "exclude": ["node_modules", "dist", "**/tests/*"],
     "references": [{ "path": "../app" }]

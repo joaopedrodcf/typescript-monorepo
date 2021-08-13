@@ -1,11 +1,20 @@
 {
     "files": [],
-    // This needs to point to each package of monorepo tsconfig file
     "references": [
-        { "path": "./packages/app" },
-        { "path": "./packages/button" },
-        { "path": "./packages/header" },
-        { "path": "./packages/server" },
-        { "path": "./packages/storybook" }
+        {
+            "path": "packages/app"
+        },
+        {
+            "path": "packages/button"
+        },
+        {
+            "path": "packages/header"
+        },
+        {
+            "path": "packages/server"
+        },
+        {
+            "path": "packages/storybook"
+        }
     ]
 }

@@ -30,6 +30,7 @@ A template of a monorepo to create a react application.
 - [x] HTTP requests on server/client Isomorphic and state management ([Apollo/client](https://github.com/apollographql/apollo-client))
 - [x] Deployed to production ([Heroku](https://dashboard.heroku.com/))
 - [x] End 2 End tests ([Cypress](https://github.com/cypress-io/cypress))
+- [x] Auto update typescript project references([Update-ts-references](https://github.com/eBayClassifiedsGroup/update-ts-references))
 - [ ] Tsconfig with recommend rules for react projects
 - [ ] Package Manager ([Yarn 2](https://yarnpkg.com/getting-started/migration))
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
@@ -56,17 +57,14 @@ packages/                       // feel free to add more components in this fold
         tsconfig.json           // every package from the monorepo that you import you need to add it to references
     header/                     // a header component
     button/                     // a button component
+cypress/
+    integration/                // include ir all the tests for cypress to run
 package.json                    // everytime you need a new devDependency add it here
 tsconfig.json                   // everytime you add a new package modify this file by adding the new package path
 ```
 ## Typescript references
 
-Every time you add a new package you must do the following
-
-1. Add to root tsconfig.json the path of the new package
-2. If this package is a dependency of another package you also need to add it to the parent tsconfig.json file
-
-WIP: Create an automatic way of creating the project references
+They are updated automatically as soon as you do `yarn`
 
 ## :keyboard: Commands
 
@@ -147,16 +145,15 @@ Note: This part requires you to have a heroku account
 
 ## :books: Biography
 
-Monorepo configs
+### Monorepo configs
 https://github.com/wixplosives/sample-monorepo
 
-Monorepo configs
 https://baltuta.eu/posts/typescript-lerna-monorepo-the-setup
 
-Storybook and lerna setup
+### Storybook and lerna setup
 https://medium.com/loftbr/creating-a-design-system-with-monorepo-bc18e055fb3c
 
-SSR with next and apollo client
+### SSR with next and apollo client
 https://dev.to/givehug/next-js-apollo-client-and-server-on-a-single-express-app-55l6
 
 https://github.com/givehug/devto-monorepo
@@ -165,15 +162,20 @@ https://www.digitalocean.com/community/tutorials/react-react-router-ssr
 
 https://medium.com/the-andela-way/how-to-set-up-an-express-api-using-webpack-and-typescript-69d18c8c4f52
 
-SSR react router
+### SSR react router
 https://www.digitalocean.com/community/tutorials/react-react-router-ssr
 
-Handle watch cmd for typescript references
+### Handle watch cmd for typescript references
 https://blog.logrocket.com/boost-your-productivity-with-typescript-project-references/
 
-Configure react fast refresh
+### Configure react fast refresh
 https://github.com/pmmmwh/react-refresh-webpack-plugin/tree/main/examples/typescript-without-babel
 
+### SSR apollo client
+https://www.apollographql.com/docs/react/performance/server-side-rendering/
+
+### Update project refernces
+https://ebaytech.berlin/optimizing-multi-package-apps-with-typescript-project-references-d5c57a3b4440
 
 ## :memo: Contributing
 
