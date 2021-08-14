@@ -16,7 +16,7 @@ A template of a monorepo to create a react application.
 
 ## Features
 
-- [x] monorepo tooling ([Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) and [Lerna](https://github.com/lerna/lerna))
+- [x] Monorepo tooling ([Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) and [Lerna](https://github.com/lerna/lerna))
 - [x] Precommit validation ([Husky](https://github.com/typicode/husky) and [Lint-staged](https://github.com/okonet/lint-staged))
 - [x] Linting with recommended rules ([Eslint](https://github.com/eslint/eslint),[Prettier](https://github.com/prettier/prettier) and [Stylelint](https://github.com/stylelint/stylelint))
 - [x] Github actions (test, lint, etc)
@@ -31,7 +31,10 @@ A template of a monorepo to create a react application.
 - [x] Deployed to production ([Heroku](https://dashboard.heroku.com/))
 - [x] End 2 End tests ([Cypress](https://github.com/cypress-io/cypress))
 - [x] Auto update typescript project references([Update-ts-references](https://github.com/eBayClassifiedsGroup/update-ts-references))
-- [ ] Tsconfig with recommend rules for react projects
+- [ ] Generator to create packages in the monorepo ([Hygen](https://github.com/jondot/hygen))
+- [ ] Jest shared configs easily
+- [ ] Jest with recommend rules for react/node projects
+- [ ] Tsconfig with recommend rules for react/node projects
 - [ ] Package Manager ([Yarn 2](https://yarnpkg.com/getting-started/migration))
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
 - [ ] Document how to handle peerdependencies on the monorepo
@@ -62,9 +65,6 @@ cypress/
 package.json                    // everytime you need a new devDependency add it here
 tsconfig.json                   // everytime you add a new package modify this file by adding the new package path
 ```
-## Typescript references
-
-They are updated automatically as soon as you do `yarn`
 
 ## :keyboard: Commands
 
@@ -142,6 +142,10 @@ git push heroku master
 ```
 
 Note: This part requires you to have a heroku account
+
+## Typescript references
+
+They are updated automatically as soon as you do `yarn`
 
 ## :books: Biography
 
