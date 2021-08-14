@@ -1,5 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
+import { ListItem, UnorderedList } from './styles';
 
 const GET_POKEMON_DETAILS = gql`
     {
@@ -19,14 +20,14 @@ export const Home: React.FC = () => {
     if (error) return <p>Error :(</p>;
 
     return (
-        <ul>
+        <UnorderedList>
             {data.pokemons.results.map((x: any) => (
-                <div key={x.name}>
+                <ListItem key={x.name}>
                     <p>{x.name}</p>
                     <img src={x.image} alt={x.name} />
-                </div>
+                </ListItem>
             ))}
-        </ul>
+        </UnorderedList>
     );
 };
 

@@ -5,5 +5,12 @@
         "rootDir": "src"
     },
     "exclude": ["node_modules", "dist"],
-    "references": [{ "path": "../button" }, { "path": "../header" }]
+    "references": [
+        {
+            "path": "../button"
+        },
+        {
+            "path": "../header"
+        }
+    ]
 }
