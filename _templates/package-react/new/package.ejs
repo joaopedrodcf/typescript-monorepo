@@ -1,0 +1,24 @@
+---
+to: packages/<%= h.inflection.underscore(name) %>/package.json
+---
+<% const comp = h.inflection.underscore(name) -%>
+{
+    "name": "@typescript-monorepo/<%= comp %>",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "private": true,
+    "scripts": {
+        "docs:dev": "tsc -b -w --preserveWatchOutput",
+        "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
+    },
+    "dependencies": {
+        "@emotion/react": "11.4.1",
+        "@emotion/styled": "11.3.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    }
+}

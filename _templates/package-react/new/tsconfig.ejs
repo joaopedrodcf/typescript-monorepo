@@ -1,0 +1,11 @@
+---
+to: packages/<%= h.inflection.underscore(name) %>/tsconfig.json
+---
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "exclude": ["node_modules", "dist", "**/tests/*"]
+}

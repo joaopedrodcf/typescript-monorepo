@@ -1,0 +1,5 @@
+---
+to: packages/<%= h.inflection.underscore(name) %>/src/index.ts
+---
+<% const comp = h.inflection.underscore(name) -%>
+export * from './<%= comp %>';

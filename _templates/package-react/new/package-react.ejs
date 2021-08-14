@@ -1,0 +1,10 @@
+---
+to: packages/<%= h.inflection.underscore(name) %>/src/<%= h.inflection.underscore(name) %>.tsx
+---
+<% const comp = h.inflection.camelize(name) -%>
+import React from 'react';
+import { Wrapper } from './styles';
+
+export const <%= comp %>: React.FC = ({ children }) => {
+    return <Wrapper>{children}</Wrapper>;
+};

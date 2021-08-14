@@ -31,7 +31,7 @@ A template of a monorepo to create a react application.
 - [x] Deployed to production ([Heroku](https://dashboard.heroku.com/))
 - [x] End 2 End tests ([Cypress](https://github.com/cypress-io/cypress))
 - [x] Auto update typescript project references([Update-ts-references](https://github.com/eBayClassifiedsGroup/update-ts-references))
-- [ ] Generator to create packages in the monorepo ([Hygen](https://github.com/jondot/hygen))
+- [x] Generator to create packages in the monorepo ([Hygen](https://github.com/jondot/hygen))
 - [ ] Jest shared configs easily
 - [ ] Jest with recommend rules for react/node projects
 - [ ] Tsconfig with recommend rules for react/node projects
@@ -148,6 +148,9 @@ Note: This part requires you to have a heroku account
 They are updated automatically as soon as you do `yarn`
 
 ## :books: Biography
+
+### Tooling
+https://tooling.js.org/
 
 ### Monorepo configs
 https://github.com/wixplosives/sample-monorepo
