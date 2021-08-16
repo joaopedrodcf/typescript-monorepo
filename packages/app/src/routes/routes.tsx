@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../pages/home';
-import About from '../pages/about';
-import Contacts from '../pages/contacts';
-import NotFound from '../pages/not-found';
+import About from '../pages/about/src/about';
+import Contacts from '../pages/contatcs/src/contacts';
+import Home from '../pages/home/src/home';
+import NotFound from '../pages/not-found/src/not-found';
 
 export const Routes: React.FC = () => {
     return (

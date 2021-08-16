@@ -4,7 +4,7 @@
         "outDir": "dist",
         "rootDir": "stories"
     },
-    "exclude": ["node_modules", "dist", "**/*.test.ts"],
+    "exclude": ["node_modules", "dist", "**/styles/*"],
     "references": [
         {
             "path": "../button"

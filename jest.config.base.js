@@ -1,6 +1,6 @@
 module.exports = {
     preset: 'ts-jest',
-    roots: ['<rootDir>/src'],
+    roots: ['<rootDir>'],
     testEnvironment: 'node',
     collectCoverage: true,
     coveragePathIgnorePatterns: [
@@ -10,4 +10,5 @@ module.exports = {
     ],
     coverageDirectory: '<rootDir>/coverage/',
     verbose: true,
+    testMatch: ['**/tests/*test.(ts|tsx)'],
 };

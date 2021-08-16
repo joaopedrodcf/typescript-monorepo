@@ -181,8 +181,11 @@ https://github.com/pmmmwh/react-refresh-webpack-plugin/tree/main/examples/typesc
 ### SSR apollo client
 https://www.apollographql.com/docs/react/performance/server-side-rendering/
 
-### Update project refernces
+### Update project references
 https://ebaytech.berlin/optimizing-multi-package-apps-with-typescript-project-references-d5c57a3b4440
+
+### storybook
+https://medium.com/kenshoos-engineering-blog/how-to-test-400-react-components-without-breaking-a-sweat-aa304a5cc72b
 
 ## :memo: Contributing
 
