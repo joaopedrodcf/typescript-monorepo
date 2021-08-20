@@ -4,11 +4,14 @@ const BundleAnalyzerPlugin =
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const path = require('path');
 
 const clientPort = 8080;
 
-module.exports = (env, argv) => {
+const smp = new SpeedMeasurePlugin();
+
+const webpackConfig = smp.wrap((env, argv) => {
     const isDevelopment = argv.mode !== 'production';
     const entry = isDevelopment ? 'client' : 'server';
 
@@ -79,4 +82,6 @@ module.exports = (env, argv) => {
             },
         },
     };
-};
+});
+
+module.exports = webpackConfig;

@@ -38,6 +38,7 @@ A template of a monorepo to create a react application.
 - [ ] Package Manager ([Yarn 2](https://yarnpkg.com/getting-started/migration))
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
 - [ ] Document how to handle peerdependencies on the monorepo
+- [ ] Load tests ([Artillary](https://github.com/artilleryio/artillery))
 
 
 ## Folder structure
