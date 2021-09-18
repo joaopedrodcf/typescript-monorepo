@@ -22,7 +22,14 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:cypress/recommended',
     ],
-    plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'import', 'prettier'],
+    plugins: [
+        '@typescript-eslint',
+        'react',
+        'jsx-a11y',
+        'import',
+        'prettier',
+        'graphql',
+    ],
     rules: {
         'import/order': [
             'error',
@@ -38,6 +45,13 @@ module.exports = {
             },
         ],
         'react/prop-types': 'off',
-        'react/react-in-jsx-scope': 'off', // not necessary anymore for react 17
+        'react/react-in-jsx-scope': 'off', // not necessary anymore for react 17,
+        'graphql/template-strings': [
+            'error',
+            {
+                env: 'apollo',
+                schemaJson: require('./schema.json'),
+            },
+        ],
     },
 };
