@@ -32,6 +32,8 @@ A template of a monorepo to create a react application.
 - [x] End 2 End tests ([Cypress](https://github.com/cypress-io/cypress))
 - [x] Auto update typescript project references([Update-ts-references](https://github.com/eBayClassifiedsGroup/update-ts-references))
 - [x] Generator to create packages in the monorepo ([Hygen](https://github.com/jondot/hygen))
+- [x] Graphql schema validation and type checking ([eslint-plugin-graphql](https://github.com/apollostack/eslint-plugin-graphql)) and ([apollo-tooling](https://github.com/apollographql/apollo-tooling))
+- [ ] Automatic create and validate the graphql schema on pipeline
 - [ ] Jest shared configs easily
 - [ ] Jest with recommend rules for react/node projects
 - [ ] Tsconfig with recommend rules for react/node projects
@@ -71,6 +73,16 @@ tsconfig.json                   // everytime you add a new package modify this f
 
 Run all the commands from the root folder
 The monorepo is built in a way where you don't need to change from the root to run any command
+
+## Download schema from apollo (introspection)
+
+For the schema to donwload correctly you need node 14 instead of 16 because of the following issue: https://github.com/apollographql/apollo-tooling/issues/2415
+
+```
+npx apollo schema:download --endpoint=https://graphql-pokeapi.graphcdn.app/graphql schema.json
+
+npx apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes=packages/app/**/**.tsx --tagName=gql --addTypename  types
+```
 
 ### Install dependencies
 ```
@@ -187,6 +199,9 @@ https://ebaytech.berlin/optimizing-multi-package-apps-with-typescript-project-re
 
 ### storybook
 https://medium.com/kenshoos-engineering-blog/how-to-test-400-react-components-without-breaking-a-sweat-aa304a5cc72b
+
+### schema checking and type checking
+https://dgraph.io/blog/post/apollo-react-hooks-with-typescript/
 
 ## :memo: Contributing
 
