@@ -18352,10 +18352,10 @@ upath@^2.0.1:
   resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
   integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
 
-update-ts-references@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/update-ts-references/-/update-ts-references-2.4.0.tgz#e57b87d98f13b663ae492509422ff2d3f506664e"
-  integrity sha512-bZdogp2eg8P9MBum0JICAXadQ4QaHAkoBwqdREZPsas3UFMGrBM9mispN/baW4FgttJzf0BDaIJT/B51YfPgKA==
+update-ts-references@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/update-ts-references/-/update-ts-references-2.4.1.tgz#15c3c045ca887ce0f9fbe116da84727e36a62b03"
+  integrity sha512-t5o/ijSiFhm67hmVN0m+lOkUopV3MYYZE/lhd3bYaGTCkU+3TpnfRxP/OoxRdapzPOuZaxVBmMwjtW1lN8WoqA==
   dependencies:
     "@formatjs/cli" "^2.3.1"
     glob "^7.1.6"
