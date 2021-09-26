@@ -18,7 +18,7 @@
         "@babel/core": "7.15.5",
         "@cypress/react": "5.10.0",
         "@cypress/webpack-dev-server": "1.6.0",
-        "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+        "@pmmmwh/react-refresh-webpack-plugin": "0.5.1",
         "@storybook/addon-actions": "6.3.8",
         "@storybook/addon-essentials": "6.3.8",
         "@storybook/addon-links": "6.3.8",
