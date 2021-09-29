@@ -6,7 +6,7 @@
         "packages/*"
     ],
     "dependencies": {
-        "@apollo/client": "3.4.13",
+        "@apollo/client": "3.4.15",
         "@emotion/react": "11.4.1",
         "@emotion/styled": "11.3.0",
         "cross-fetch": "3.1.4",
@@ -26,21 +26,21 @@
         "@storybook/manager-webpack5": "6.4.0-beta.1",
         "@storybook/react": "6.3.8",
         "@testing-library/jest-dom": "5.14.1",
-        "@testing-library/react": "12.1.0",
+        "@testing-library/react": "12.1.1",
         "@types/compression": "1.7.2",
         "@types/express": "4.17.13",
         "@types/jest": "27.0.2",
         "@types/loadable__component": "5.13.4",
-        "@types/node": "16.4.6",
-        "@types/react": "17.0.1",
-        "@types/react-dom": "17.0.1",
+        "@types/node": "16.10.2",
+        "@types/react": "17.0.25",
+        "@types/react-dom": "17.0.9",
         "@types/react-router": "5.1.16",
         "@types/react-router-dom": "5.3.0",
-        "@typescript-eslint/eslint-plugin": "4.31.2",
-        "@typescript-eslint/parser": "4.31.2",
+        "@typescript-eslint/eslint-plugin": "4.32.0",
+        "@typescript-eslint/parser": "4.32.0",
         "babel-loader": "8.2.2",
         "css-loader": "6.3.0",
-        "cypress": "8.4.1",
+        "cypress": "8.5.0",
         "dedubcheck": "0.0.6",
         "eslint": "7.32.0",
         "eslint-config-prettier": "8.3.0",
@@ -56,7 +56,7 @@
         "html-webpack-plugin": "5.3.2",
         "husky": "7.0.2",
         "hygen": "6.1.0",
-        "jest": "27.2.2",
+        "jest": "27.2.4",
         "lerna": "4.0.0",
         "lint-staged": "11.1.2",
         "mini-css-extract-plugin": "2.3.0",
@@ -72,16 +72,12 @@
         "tsconfig-paths-webpack-plugin": "3.5.1",
         "typescript": "4.4.3",
         "update-ts-references": "2.4.1",
-        "webpack": "5.54.0",
+        "webpack": "5.55.1",
         "webpack-bundle-analyzer": "4.4.2",
         "webpack-cli": "4.8.0",
         "webpack-dev-server": "3.11.2",
         "webpack-monitor": "1.0.14",
         "webpack-node-externals": "3.0.0"
-    },
-    "resolutions": {
-        "@types/react": "17.0.1",
-        "@types/react-dom": "17.0.1"
     },
     "scripts": {
         "start": "yarn workspace @typescript-monorepo/app start",
@@ -98,6 +94,8 @@
         "test:watch": "yarn build && jest --watch",
         "test:dependencies": "yarn dedubcheck",
         "test:e2e": "yarn cypress open",
-        "postinstall": "update-ts-references"
+        "postinstall": "update-ts-references",
+        "generate-schema": "npx apollo schema:download --endpoint=https://graphql-pokeapi.graphcdn.app/graphql schema.json",
+        "generate-types": "npx apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes=packages/app/**/**.tsx --tagName=gql --addTypename  types"
     }
 }
