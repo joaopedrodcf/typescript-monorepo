@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@babel/core": "7.15.8",
-        "@cypress/react": "5.10.0",
+        "@cypress/react": "5.10.1",
         "@cypress/webpack-dev-server": "1.6.0",
         "@pmmmwh/react-refresh-webpack-plugin": "0.5.1",
         "@storybook/addon-actions": "6.3.8",
