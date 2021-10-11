@@ -62,7 +62,7 @@
         "hygen": "6.1.0",
         "jest": "27.2.5",
         "lerna": "4.0.0",
-        "lint-staged": "11.1.2",
+        "lint-staged": "11.2.3",
         "mini-css-extract-plugin": "2.4.2",
         "path": "0.12.7",
         "prettier": "2.4.1",
