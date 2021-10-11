@@ -44,7 +44,7 @@
         "@typescript-eslint/parser": "5.0.0",
         "babel-loader": "8.2.2",
         "css-loader": "6.4.0",
-        "cypress": "8.5.0",
+        "cypress": "8.6.0",
         "dedubcheck": "0.0.6",
         "eslint": "8.0.0",
         "eslint-config-prettier": "8.3.0",
