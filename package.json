@@ -87,9 +87,8 @@
     "scripts": {
         "start": "yarn workspace @typescript-monorepo/app start",
         "start:server": "yarn workspace @typescript-monorepo/server start",
-        "lint": "yarn lint:js && yarn lint:json && yarn lint:css",
+        "lint": "yarn lint:js && yarn lint:css",
         "lint:js": "eslint . --ext .js,.ts,.tsx --fix",
-        "lint:json": "prettier --write **/*.json",
         "lint:css": "stylelint **/styles.tsx --fix",
         "storybook": "lerna run docs:dev --parallel",
         "clean": "lerna run clean --parallel",
@@ -102,5 +101,6 @@
         "postinstall": "update-ts-references",
         "generate-schema": "npx apollo schema:download --endpoint=https://graphql-pokeapi.graphcdn.app/graphql schema.json",
         "generate-types": "npx apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes=packages/app/**/**.tsx --tagName=gql --addTypename  types"
-    }
+    },
+    "packageManager": "yarn@3.0.2"
 }

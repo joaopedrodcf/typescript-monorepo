@@ -64,10 +64,37 @@ packages/                       // feel free to add more components in this fold
     header/                     // a header component
     button/                     // a button component
 cypress/
-    integration/                // include ir all the tests for cypress to run
+    integration/                // include all the tests for cypress to run
 package.json                    // everytime you need a new devDependency add it here
 tsconfig.json                   // everytime you add a new package modify this file by adding the new package path
 ```
+
+## Yarn 2
+
+This project uses yarn 2, but to use it somethings were changed to make it work
+prettier was removed from the linting
+
+
+Script that cause the error `yarn lint:json`
+```
+"lint:json": "prettier --write **/*.json",
+```
+
+Error caused
+```
+Internal Error: spawn ENAMETOOLONG
+    at ChildProcess.spawn (node:internal/child_process:415:11)
+    at Object.spawn (node:child_process:609:9)
+    at FL (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:4:7428)
+    at Wf.implementation (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:255:1599)
+    at Wf.exec (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:258:1582)
+    at Wf.run (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:258:1753)
+    at SJ (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:267:6185)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async cwe (C:\Users\joaof\Documents\projects\typescript-monorepo\.yarn\releases\yarn-3.0.2.cjs:269:16)
+```
+
 
 ## :keyboard: Commands
 
