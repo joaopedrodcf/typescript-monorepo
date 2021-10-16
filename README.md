@@ -36,7 +36,7 @@ A template of a monorepo to create a react application.
 - [ ] Automatic create and validate the graphql schema on pipeline
 - [ ] Jest shared configs easily
 - [ ] Jest with recommend rules for react/node projects
-- [ ] Tsconfig with recommend rules for react/node projects
+- [x] Tsconfig with recommend rules for react/node projects ([tsconfig/bases](https://github.com/tsconfig/bases))
 - [ ] Package Manager ([Yarn 2](https://yarnpkg.com/getting-started/migration))
 - [ ] Multiple team project handling tool (Codeowners and Merge bot)
 - [ ] Document how to handle peerdependencies on the monorepo
