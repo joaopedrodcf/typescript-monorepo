@@ -10,3 +10,5 @@ tsconfig.tsbuildinfo
 !.yarn/versions
 .pnp.*
 coverage
+cypress/screenshots/*
+cypress/videos/*
