@@ -13,7 +13,7 @@
         "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
     },
     "dependencies": {
-        "@emotion/react": "11.4.1",
+        "@emotion/react": "11.5.0",
         "@emotion/styled": "11.3.0",
         "@typescript-monorepo/button": "^1.0.0",
         "@typescript-monorepo/header": "^1.0.0",
