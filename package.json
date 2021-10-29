@@ -43,7 +43,7 @@
         "@types/react-router-dom": "5.3.1",
         "@typescript-eslint/eslint-plugin": "5.0.0",
         "@typescript-eslint/parser": "5.0.0",
-        "babel-loader": "8.2.2",
+        "babel-loader": "8.2.3",
         "css-loader": "6.4.0",
         "cypress": "8.6.0",
         "dedubcheck": "0.0.6",
