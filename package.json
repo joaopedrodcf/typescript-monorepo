@@ -64,7 +64,7 @@
         "jest": "27.3.1",
         "lerna": "4.0.0",
         "lint-staged": "11.2.6",
-        "mini-css-extract-plugin": "2.4.2",
+        "mini-css-extract-plugin": "2.4.3",
         "path": "0.12.7",
         "prettier": "2.4.1",
         "react-refresh": "0.10.0",
