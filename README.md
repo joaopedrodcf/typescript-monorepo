@@ -33,6 +33,8 @@ A template of a monorepo to create a react application.
 - [x] Auto update typescript project references([Update-ts-references](https://github.com/eBayClassifiedsGroup/update-ts-references))
 - [x] Generator to create packages in the monorepo ([Hygen](https://github.com/jondot/hygen))
 - [x] Graphql schema validation and type checking ([eslint-plugin-graphql](https://github.com/apollostack/eslint-plugin-graphql)) and ([apollo-tooling](https://github.com/apollographql/apollo-tooling))
+- [x] Automatic create PRs to upgrade versions ([renovatebot])
+- [x] Automatic use correct node version ([.nvmrc])
 - [ ] Automatic create and validate the graphql schema on pipeline
 - [ ] Jest shared configs easily
 - [ ] Jest with recommend rules for react/node projects

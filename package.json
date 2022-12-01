@@ -5,9 +5,13 @@
     "workspaces": [
         "packages/*"
     ],
+    "engines": {
+        "node": "=16"
+    },
     "resolutions": {
         "@types/react": "17.0.52",
-        "@types/react-dom": "17.0.18"
+        "@types/react-dom": "17.0.18",
+        "ts-node": "10.9.1"
     },
     "dependencies": {
         "@apollo/client": "3.7.1",
@@ -47,12 +51,12 @@
         "css-loader": "6.7.2",
         "cypress": "8.7.0",
         "dedubcheck": "0.0.8",
-        "eslint": "7.32.0",
+        "eslint": "8.28.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-cypress": "2.12.1",
         "eslint-plugin-graphql": "4.0.0",
         "eslint-plugin-import": "2.26.0",
-        "eslint-plugin-jest-dom": "3.9.4",
+        "eslint-plugin-jest-dom": "4.0.3",
         "eslint-plugin-jsx-a11y": "6.6.1",
         "eslint-plugin-prettier": "4.2.1",
         "eslint-plugin-react": "7.31.11",
