@@ -25,7 +25,7 @@
     "devDependencies": {
         "@babel/core": "7.20.5",
         "@cypress/react": "5.12.5",
-        "@cypress/webpack-dev-server": "1.8.4",
+        "@cypress/webpack-dev-server": "3.11.0",
         "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
         "@storybook/addon-actions": "6.5.13",
         "@storybook/addon-essentials": "6.5.13",
