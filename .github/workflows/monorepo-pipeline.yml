@@ -50,7 +50,7 @@ jobs:
       run: yarn test
 
     - name: E2E test step
-      uses: cypress-io/github-action@v2
+      uses: cypress-io/github-action@v7.4.3
       with:
           browser: chrome
           headless: true
